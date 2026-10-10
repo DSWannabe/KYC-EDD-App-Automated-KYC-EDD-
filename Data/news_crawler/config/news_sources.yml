@@ -1,0 +1,87 @@
+# Nhom bao co san. Moi bao co nhieu feed (RSS "tin moi nhat" chi tra ~30-50 bai gan nhat,
+# nen nen them feed theo chuyen muc va chay job nhieu lan/ngay).
+#
+# LUU Y: URL feed duoi day CHUA duoc kiem chung tu may chu. Chay truoc:
+#     python -m jobs.crawl_daily --discover-only
+# de xem feed nao hoat dong, sua/xoa feed loi roi moi crawl that.
+
+defaults:
+  user_agent: "Mozilla/5.0 (compatible; KYCResearchBot/0.1; +mailto:your-email@example.com)"
+  robots_agent: "KYCResearchBot"
+  request_timeout: 15
+  delay_between_requests: 1.0     # giay, giua 2 lan tai bai
+  max_items_per_feed: 100
+  min_text_chars: 300             # bai ngan hon coi nhu khong co noi dung (gallery, video...)
+
+sources:
+  - name: vnexpress
+    domain: vnexpress.net
+    tier: major_press
+    enabled: true
+    feeds:
+      - {type: rss, url: "https://vnexpress.net/rss/tin-moi-nhat.rss"}
+      - {type: rss, url: "https://vnexpress.net/rss/thoi-su.rss"}
+      - {type: rss, url: "https://vnexpress.net/rss/phap-luat.rss"}
+      - {type: rss, url: "https://vnexpress.net/rss/kinh-doanh.rss"}
+    search:
+      url: "https://timkiem.vnexpress.net/?q={q}&media_type=all&fromdate={from_ts}&todate={to_ts}&cate_code=&search_f=title,tag_list&date_format=all&latest=on&page={page}"
+      link_selector: "h3 a[href]"
+      article_regex: '-\d+\.html$'
+      exclude_hosts: [video.vnexpress.net, e.vnexpress.net]
+
+  - name: tuoitre
+    domain: tuoitre.vn
+    tier: major_press
+    enabled: true
+    feeds:
+      - {type: rss, url: "https://tuoitre.vn/rss/tin-moi-nhat.rss"}
+      - {type: rss, url: "https://tuoitre.vn/rss/thoi-su.rss"}
+      - {type: rss, url: "https://tuoitre.vn/rss/phap-luat.rss"}
+      - {type: rss, url: "https://tuoitre.vn/rss/kinh-doanh.rss"}
+
+  - name: thanhnien
+    domain: thanhnien.vn
+    tier: major_press
+    enabled: true
+    feeds:
+      - {type: rss, url: "https://thanhnien.vn/rss/home.rss"}
+      - {type: rss, url: "https://thanhnien.vn/rss/thoi-su.rss"}
+      - {type: rss, url: "https://thanhnien.vn/rss/kinh-te.rss"}
+
+  - name: dantri
+    domain: dantri.com.vn
+    tier: major_press
+    enabled: true
+    delay_between_requests: 4
+    feeds:
+      - {type: rss, url: "https://dantri.com.vn/rss/home.rss"}
+      - {type: rss, url: "https://dantri.com.vn/rss/phap-luat.rss"}
+      - {type: rss, url: "https://dantri.com.vn/rss/kinh-doanh.rss"}
+    search:
+      url: "https://dantri.com.vn/tim-kiem/{q}.htm?pi={page}"
+      q_encoding: slug
+      link_selector: "h3 a[href]"
+      article_regex: '-\d{10,}\.htm$'
+
+  - name: vietnamnet
+    domain: vietnamnet.vn
+    tier: major_press
+    enabled: true
+    feeds:
+      - {type: rss, url: "https://vietnamnet.vn/rss/phap-luat.rss"}
+      - {type: rss, url: "https://vietnamnet.vn/rss/kinh-doanh.rss"}
+
+  - name: cafef
+    domain: cafef.vn
+    tier: trade_press
+    enabled: true
+    feeds:
+      - {type: rss, url: "https://cafef.vn/home.rss"}
+
+  # Vi du sitemap (chi lay URL co lastmod trong max_age_days ngay gan day):
+  # - name: ten_bao
+  #   domain: example.vn
+  #   tier: major_press
+  #   enabled: false
+  #   feeds:
+  #     - {type: sitemap, url: "https://example.vn/news-sitemap.xml", max_age_days: 2}

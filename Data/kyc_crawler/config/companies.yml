@@ -1,0 +1,104 @@
+# Danh sach cong ty dung de tim tin (backfill_search) va nap bang entities.
+# Moi dong: ticker = ma chung khoan, query = chuoi dem di tim tren bao.
+# Dat cong ty chac chan co nhieu tin (Vingroup) len dau de co ngat nhan dien bao chay dung som.
+companies:
+  - {ticker: VIC, query: "Vingroup"}
+  - {ticker: ACB, query: "Ngân Hàng ACB"}
+  - {ticker: VCB, query: "Ngân Hàng Vietcombank"}
+  - {ticker: BID, query: "Ngân Hàng BIDV"}
+  - {ticker: VND, query: "Chứng Khoán VNDirect"}
+  - {ticker: DXG, query: "Đất Xanh Group"}
+  - {ticker: FPT, query: "Công ty FPT"}
+  - {ticker: SHB, query: "Ngân Hàng SHB"}
+  - {ticker: EIB, query: "Ngân Hàng Eximbank"}
+  - {ticker: ANV, query: "Thủy Sản Nam Việt"}
+  - {ticker: BCM, query: "Becamex IDC"}
+  - {ticker: BMP, query: "Nhựa Bình Minh"}
+  - {ticker: BSI, query: "Chứng Khoán BIDV"}
+  - {ticker: BVH, query: "Tập Đoàn Bảo Việt"}
+  - {ticker: BWE, query: "Biwase"}
+  - {ticker: CII, query: "Hạ Tầng Kỹ Thuật CII"}
+  - {ticker: CMG, query: "Tập Đoàn CMC"}
+  - {ticker: CTD, query: "Coteccons"}
+  - {ticker: CTG, query: "Ngân Hàng VietinBank"}
+  - {ticker: CTR, query: "Viettel Construction"}
+  - {ticker: CTS, query: "Chứng Khoán VietinBank"}
+  - {ticker: DBC, query: "Dabaco"}
+  - {ticker: DCM, query: "Đạm Cà Mau"}
+  - {ticker: DGC, query: "Hóa Chất Đức Giang"}
+  - {ticker: DGW, query: "Digiworld"}
+  - {ticker: DIG, query: "DIC Corp"}
+  - {ticker: DPM, query: "Đạm Phú Mỹ"}
+  - {ticker: DSE, query: "Chứng Khoán DNSE"}
+  - {ticker: DXS, query: "Đất Xanh Services"}
+  - {ticker: EVF, query: "EVNFinance"}
+  - {ticker: FRT, query: "FPT Retail"}
+  - {ticker: FTS, query: "Chứng Khoán FPT"}
+  - {ticker: GAS, query: "PV GAS"}
+  - {ticker: GEE, query: "Điện Lực Gelex"}
+  - {ticker: GEX, query: "Tập Đoàn Gelex"}
+  - {ticker: GMD, query: "Gemadept"}
+  - {ticker: GVR, query: "Tập Đoàn Cao Su Việt Nam"}
+  - {ticker: HAG, query: "Hoàng Anh Gia Lai"}
+  - {ticker: HCM, query: "Chứng Khoán HSC"}
+  - {ticker: HDB, query: "Ngân Hàng HDBank"}
+  - {ticker: HDC, query: "Hodeco"}
+  - {ticker: HDG, query: "Tập Đoàn Hà Đô"}
+  - {ticker: HHV, query: "Đèo Cả"}
+  - {ticker: HPG, query: "Tập Đoàn Hòa Phát"}
+  - {ticker: HSG, query: "Tập Đoàn Hoa Sen"}
+  - {ticker: HT1, query: "Xi Măng Hà Tiên"}
+  - {ticker: IMP, query: "Imexpharm"}
+  - {ticker: KBC, query: "Đô Thị Kinh Bắc"}
+  - {ticker: KDC, query: "Tập Đoàn KIDO"}
+  - {ticker: KDH, query: "Nhà Khang Điền"}
+  - {ticker: KOS, query: "Công ty Kosy"}
+  - {ticker: LPB, query: "Ngân Hàng LPBank"}
+  - {ticker: MBB, query: "Ngân Hàng MB"}
+  - {ticker: MSB, query: "Ngân Hàng MSB"}
+  - {ticker: MSN, query: "Tập Đoàn Masan"}
+  - {ticker: MWG, query: "Thế Giới Di Động"}
+  - {ticker: NAB, query: "Ngân Hàng Nam Á"}
+  - {ticker: NKG, query: "Thép Nam Kim"}
+  - {ticker: NLG, query: "Nam Long Group"}
+  - {ticker: NT2, query: "Điện Lực Nhơn Trạch 2"}
+  - {ticker: OCB, query: "Ngân Hàng OCB"}
+  - {ticker: PAN, query: "Tập Đoàn PAN"}
+  - {ticker: PC1, query: "Tập Đoàn PC1"}
+  - {ticker: PDR, query: "Bất Động Sản Phát Đạt"}
+  - {ticker: PHR, query: "Cao Su Phước Hòa"}
+  - {ticker: PLX, query: "Petrolimex"}
+  - {ticker: PNJ, query: "Vàng Bạc Đá Quý PNJ"}
+  - {ticker: POW, query: "PV Power"}
+  - {ticker: PPC, query: "Nhiệt Điện Phả Lại"}
+  - {ticker: PTB, query: "Công ty Phú Tài"}
+  - {ticker: PVD, query: "PV Drilling"}
+  - {ticker: PVT, query: "PVTrans"}
+  - {ticker: REE, query: "Cơ Điện Lạnh REE"}
+  - {ticker: SAB, query: "Sabeco"}
+  - {ticker: SBT, query: "TTC AgriS"}
+  - {ticker: SCS, query: "SCSC"}
+  - {ticker: SIP, query: "Sài Gòn VRG"}
+  - {ticker: SJS, query: "Sudico"}
+  - {ticker: SSB, query: "Ngân Hàng SeABank"}
+  - {ticker: SSI, query: "Chứng Khoán SSI"}
+  - {ticker: STB, query: "Ngân Hàng Sacombank"}
+  - {ticker: SZC, query: "Sonadezi Châu Đức"}
+  - {ticker: TCB, query: "Ngân Hàng Techcombank"}
+  - {ticker: TCH, query: "Tài Chính Hoàng Huy"}
+  - {ticker: TLG, query: "Tập Đoàn Thiên Long"}
+  - {ticker: TPB, query: "Ngân Hàng TPBank"}
+  - {ticker: VCG, query: "Vinaconex"}
+  - {ticker: VCI, query: "Chứng Khoán Vietcap"}
+  - {ticker: VGC, query: "Viglacera"}
+  - {ticker: VHC, query: "Thủy Sản Vĩnh Hoàn"}
+  - {ticker: VHM, query: "Vinhomes"}
+  - {ticker: VIB, query: "Ngân Hàng VIB"}
+  - {ticker: VIX, query: "Chứng Khoán VIX"}
+  - {ticker: VJC, query: "Vietjet"}
+  - {ticker: VNM, query: "Vinamilk"}
+  - {ticker: VPB, query: "Ngân Hàng VPBank"}
+  - {ticker: VPI, query: "Văn Phú Invest"}
+  - {ticker: VRE, query: "Vincom Retail"}
+  - {ticker: VSC, query: "Viconship"}
+  - {ticker: VTP, query: "Viettel Post"}

@@ -1,0 +1,31 @@
+# Danh sách nguồn Tier 1 - thông tin cơ bản (đã biết trước cấu trúc site)
+# enabled: false = chưa xác nhận cấu trúc, chưa nên bật tự động chạy
+
+sources:
+  - name: masothue
+    display_name: "MaSoThue"
+    base_url: "https://masothue.com"
+    tier: 1
+    trust_level: aggregator
+    enabled: true
+    rate_limit_seconds: 2
+    search_url_template: "https://masothue.com/Search/?q={query}&type=company"
+
+  - name: dangkykinhdoanh
+    display_name: "Cong thong tin quoc gia ve dang ky doanh nghiep"
+    base_url: "https://dangkykinhdoanh.gov.vn"
+    tier: 1
+    trust_level: official
+    enabled: false
+    rate_limit_seconds: 3
+    notes: "SharePoint-based, search co the can Playwright thay vi requests thuong."
+
+  - name: tratencongty
+    display_name: "TraTenCongTy"
+    base_url: "https://www.tratencongty.com"
+    tier: 1
+    trust_level: aggregator
+    enabled: false
+    rate_limit_seconds: 2
+    notes: "Chua xac nhan search url pattern."
+
