@@ -6,3 +6,6 @@ __pycache__/
 *.csv
 *.json
 *.png
+*.ipynb
+*.npy
+*.jsonl

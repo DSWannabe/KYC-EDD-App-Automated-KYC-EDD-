@@ -15,10 +15,9 @@ dua URL tim duoc vao cung luong tai -> lam sach -> chong trung -> luu voi crawl_
 Truy van da tim xong duoc ghi lai, chay lai se bo qua (dung --force de tim lai).
 
     python -m jobs.backfill_search --site vnexpress --query vingroup --pages 3 --dry-run
-    python -m jobs.backfill_search --site all --queries-file queries.txt --pages 3
+
     python -m jobs.backfill_search --site tuoitre dantri --query "Vingroup" --from-ts 1577836800 --to-ts 1609459199
 
 # kyc_crawler/orhestratory.py
 
-Crawl theo trang mã số thuế 
-
+Crawl theo trang mã số thuế

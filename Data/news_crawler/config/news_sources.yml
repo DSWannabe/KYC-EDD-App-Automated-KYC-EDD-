@@ -48,20 +48,20 @@ sources:
       - {type: rss, url: "https://thanhnien.vn/rss/thoi-su.rss"}
       - {type: rss, url: "https://thanhnien.vn/rss/kinh-te.rss"}
 
-  - name: dantri
-    domain: dantri.com.vn
-    tier: major_press
-    enabled: true
-    delay_between_requests: 4
-    feeds:
-      - {type: rss, url: "https://dantri.com.vn/rss/home.rss"}
-      - {type: rss, url: "https://dantri.com.vn/rss/phap-luat.rss"}
-      - {type: rss, url: "https://dantri.com.vn/rss/kinh-doanh.rss"}
-    search:
-      url: "https://dantri.com.vn/tim-kiem/{q}.htm?pi={page}"
-      q_encoding: slug
-      link_selector: "h3 a[href]"
-      article_regex: '-\d{10,}\.htm$'
+  # - name: dantri
+  #   domain: dantri.com.vn
+  #   tier: major_press
+  #   enabled: true
+  #   delay_between_requests: 4
+  #   feeds:
+  #     - {type: rss, url: "https://dantri.com.vn/rss/home.rss"}
+  #     - {type: rss, url: "https://dantri.com.vn/rss/phap-luat.rss"}
+  #     - {type: rss, url: "https://dantri.com.vn/rss/kinh-doanh.rss"}
+  #   search:
+  #     url: "https://dantri.com.vn/tim-kiem/{q}.htm?pi={page}"
+  #     q_encoding: slug
+  #     link_selector: "h3 a[href]"
+  #     article_regex: '-\d{10,}\.htm$'
 
   - name: vietnamnet
     domain: vietnamnet.vn

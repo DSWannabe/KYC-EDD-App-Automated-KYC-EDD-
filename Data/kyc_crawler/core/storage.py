@@ -25,13 +25,21 @@ CREATE TABLE IF NOT EXISTS companies (
 CREATE UNIQUE INDEX IF NOT EXISTS companies_source_taxcode_idx
     ON companies (source, tax_code)
     WHERE tax_code IS NOT NULL;
+
+CREATE TABLE IF NOT EXISTS search_log (
+    source TEXT NOT NULL,
+    query TEXT NOT NULL,
+    page INTEGER NOT NULL,
+    results INTEGER NOT NULL,
+    searched_at TEXT NOT NULL,
+    PRIMARY KEY (source, query, page)
+);
 """
 
 
 def get_connection():
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     return sqlite3.connect(DB_PATH, timeout=30)  # cho toi 30s neu file dang bi khoa
-
 
 def init_db():
     conn = get_connection()
@@ -56,5 +64,29 @@ def insert_records(source: str, query: str, records: list[dict]):
              r.get("legal_rep"), r.get("address"), r.get("detail_url"), now),
         )
 
+    conn.commit()
+    conn.close()
+
+def page_done(source: str, query: str, page: int) -> bool:
+    """Trang nay da cao roi chua?"""
+    init_db()
+    conn = get_connection()
+    row = conn.execute(
+        "SELECT 1 FROM search_log WHERE source=? AND query=? AND page=?",
+        (source, query, page),
+    ).fetchone()
+    conn.close()
+    return row is not None
+
+
+def log_page(source: str, query: str, page: int, n_results: int):
+    """Ghi lai la trang nay da cao xong."""
+    init_db()
+    conn = get_connection()
+    now = datetime.now(timezone.utc).isoformat()
+    conn.execute(
+        "INSERT OR REPLACE INTO search_log VALUES (?, ?, ?, ?, ?)",
+        (source, query, page, n_results, now),
+    )
     conn.commit()
     conn.close()

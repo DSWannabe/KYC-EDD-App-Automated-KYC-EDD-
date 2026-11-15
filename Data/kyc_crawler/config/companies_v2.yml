@@ -1,0 +1,114 @@
+# Query de crawl cong ty DE NHAM (confounders) tu masothue cho bai toan Entity Resolution.
+# Moi query la phan ten dac trung trong TEN PHAP LY (khong phai ten thuong hieu),
+# nen se keo ve ca cong ty that lan cac cong ty khac trung ten.
+# Sau khi crawl: giu ban ghi co 10 so dau ma so thue KHAC cong ty me -> hard negative.
+# Mot ticker co the co nhieu query.
+confounders:
+  - {ticker: VIC, query: "Vingroup"}
+  - {ticker: ACB, query: "Á Châu"}
+  - {ticker: VCB, query: "Ngoại Thương"}
+  - {ticker: VCB, query: "Vietcom"}
+  - {ticker: BID, query: "Đầu Tư Và Phát Triển"}
+  - {ticker: VND, query: "VNDirect"}
+  - {ticker: DXG, query: "Đất Xanh"}
+  - {ticker: FPT, query: "FPT"}
+  - {ticker: SHB, query: "Sài Gòn Hà Nội"}
+  - {ticker: EIB, query: "Xuất Nhập Khẩu Việt Nam"}
+  - {ticker: ANV, query: "Nam Việt"}
+  - {ticker: BCM, query: "Becamex"}
+  - {ticker: BMP, query: "Bình Minh"}
+  - {ticker: BSI, query: "Chứng Khoán BIDV"}
+  - {ticker: BVH, query: "Bảo Việt"}
+  - {ticker: BWE, query: "Biwase"}
+  - {ticker: BWE, query: "Nước Môi Trường Bình Dương"}
+  - {ticker: CII, query: "Hạ Tầng Kỹ Thuật"}
+  - {ticker: CMG, query: "CMC"}
+  - {ticker: CTD, query: "Coteccons"}
+  - {ticker: CTG, query: "Công Thương"}
+  - {ticker: CTR, query: "Công Trình Viettel"}
+  - {ticker: CTS, query: "Chứng Khoán Công Thương"}
+  - {ticker: DBC, query: "Dabaco"}
+  - {ticker: DCM, query: "Phân Bón Cà Mau"}
+  - {ticker: DGC, query: "Đức Giang"}
+  - {ticker: DGW, query: "Thế Giới Số"}
+  - {ticker: DIG, query: "DIC"}
+  - {ticker: DPM, query: "Phú Mỹ"}
+  - {ticker: DSE, query: "DNSE"}
+  - {ticker: DXS, query: "Dịch Vụ Đất Xanh"}
+  - {ticker: EVF, query: "Tài Chính Điện Lực"}
+  - {ticker: FRT, query: "Bán Lẻ Kỹ Thuật Số FPT"}
+  - {ticker: FTS, query: "Chứng Khoán FPT"}
+  - {ticker: GAS, query: "Khí Việt Nam"}
+  - {ticker: GEE, query: "Điện Gelex"}
+  - {ticker: GEX, query: "Gelex"}
+  - {ticker: GMD, query: "Gemadept"}
+  - {ticker: GVR, query: "Cao Su Việt Nam"}
+  - {ticker: HAG, query: "Hoàng Anh"}
+  - {ticker: HCM, query: "Chứng Khoán Thành Phố Hồ Chí Minh"}
+  - {ticker: HDB, query: "Phát Triển Thành Phố Hồ Chí Minh"}
+  - {ticker: HDC, query: "Hodeco"}
+  - {ticker: HDG, query: "Hà Đô"}
+  - {ticker: HHV, query: "Đèo Cả"}
+  - {ticker: HPG, query: "Hòa Phát"}
+  - {ticker: HSG, query: "Hoa Sen"}
+  - {ticker: HT1, query: "Hà Tiên"}
+  - {ticker: IMP, query: "Imexpharm"}
+  - {ticker: KBC, query: "Kinh Bắc"}
+  - {ticker: KDC, query: "Kinh Đô"}
+  - {ticker: KDC, query: "KIDO"}
+  - {ticker: KDH, query: "Khang Điền"}
+  - {ticker: KOS, query: "Kosy"}
+  - {ticker: LPB, query: "Lộc Phát"}
+  - {ticker: LPB, query: "Liên Việt"}
+  - {ticker: MBB, query: "Quân Đội"}
+  - {ticker: MSB, query: "Hàng Hải"}
+  - {ticker: MSN, query: "Masan"}
+  - {ticker: MWG, query: "Thế Giới Di Động"}
+  - {ticker: NAB, query: "Nam Á"}
+  - {ticker: NKG, query: "Nam Kim"}
+  - {ticker: NLG, query: "Nam Long"}
+  - {ticker: NT2, query: "Nhơn Trạch"}
+  - {ticker: OCB, query: "Phương Đông"}
+  - {ticker: PAN, query: "PAN"}
+  - {ticker: PC1, query: "PC1"}
+  - {ticker: PC1, query: "Xây Lắp Điện"}
+  - {ticker: PDR, query: "Phát Đạt"}
+  - {ticker: PHR, query: "Phước Hòa"}
+  - {ticker: PLX, query: "Xăng Dầu Việt Nam"}
+  - {ticker: PNJ, query: "Phú Nhuận"}
+  - {ticker: POW, query: "Điện Lực Dầu Khí"}
+  - {ticker: PPC, query: "Phả Lại"}
+  - {ticker: PTB, query: "Phú Tài"}
+  - {ticker: PVD, query: "Khoan Dầu Khí"}
+  - {ticker: PVT, query: "Vận Tải Dầu Khí"}
+  - {ticker: REE, query: "Cơ Điện Lạnh"}
+  - {ticker: SAB, query: "Bia Rượu Nước Giải Khát Sài Gòn"}
+  - {ticker: SBT, query: "Thành Thành Công"}
+  - {ticker: SCS, query: "Dịch Vụ Hàng Hóa Sài Gòn"}
+  - {ticker: SIP, query: "Sài Gòn VRG"}
+  - {ticker: SJS, query: "Sudico"}
+  - {ticker: SJS, query: "Sông Đà"}
+  - {ticker: SSB, query: "Đông Nam Á"}
+  - {ticker: SSI, query: "SSI"}
+  - {ticker: STB, query: "Sài Gòn Thương Tín"}
+  - {ticker: SZC, query: "Sonadezi"}
+  - {ticker: TCB, query: "Kỹ Thương"}
+  - {ticker: TCH, query: "Hoàng Huy"}
+  - {ticker: TLG, query: "Thiên Long"}
+  - {ticker: TPB, query: "Tiên Phong"}
+  - {ticker: VCG, query: "Vinaconex"}
+  - {ticker: VCI, query: "Bản Việt"}
+  - {ticker: VCI, query: "Vietcap"}
+  - {ticker: VGC, query: "Viglacera"}
+  - {ticker: VHC, query: "Vĩnh Hoàn"}
+  - {ticker: VHM, query: "Vinhomes"}
+  - {ticker: VIB, query: "Quốc Tế Việt Nam"}
+  - {ticker: VIX, query: "VIX"}
+  - {ticker: VJC, query: "Vietjet"}
+  - {ticker: VNM, query: "Sữa Việt Nam"}
+  - {ticker: VNM, query: "Vinamilk"}
+  - {ticker: VPB, query: "Thịnh Vượng"}
+  - {ticker: VPI, query: "Văn Phú"}
+  - {ticker: VRE, query: "Vincom"}
+  - {ticker: VSC, query: "Container Việt Nam"}
+  - {ticker: VTP, query: "Bưu Chính Viettel"}
