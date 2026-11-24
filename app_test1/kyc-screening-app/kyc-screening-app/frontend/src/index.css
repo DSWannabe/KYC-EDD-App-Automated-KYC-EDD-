@@ -1,0 +1,22 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #f6f7f9; color: #1d2330; }
+.header { background: #1d2330; padding: 12px 24px; }
+.header a { color: #fff; text-decoration: none; font-weight: 600; }
+main { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+.trang { display: flex; flex-direction: column; gap: 10px; }
+label { font-size: 14px; color: #555; }
+textarea, input { padding: 8px; border: 1px solid #c5cad3; border-radius: 6px; font: inherit; }
+button { align-self: flex-start; padding: 8px 16px; border: 0; border-radius: 6px; background: #2b59c3; color: #fff; cursor: pointer; font: inherit; }
+button:disabled { background: #9aa6c4; cursor: default; }
+.khoi { background: #fff; border-radius: 8px; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; }
+.card { background: #fff; border: 2px solid #e1e4ea; border-radius: 8px; padding: 10px 14px; }
+.card-bam { cursor: pointer; }
+.card-chon { border-color: #2b59c3; background: #eef3ff; }
+.card-tren { display: flex; gap: 12px; align-items: baseline; margin-bottom: 6px; }
+.scorebar { position: relative; height: 16px; background: #e8ebf1; border-radius: 8px; overflow: hidden; }
+.scorebar-fill { height: 100%; background: #5b86e5; }
+.scorebar span { position: absolute; right: 8px; top: 0; font-size: 12px; line-height: 16px; }
+.banner { padding: 10px 14px; border-radius: 6px; background: #fff3cd; }
+.banner-loi { background: #f8d7da; }
+.banner-xong { background: #d4edda; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e1e4ea; font-size: 14px; }

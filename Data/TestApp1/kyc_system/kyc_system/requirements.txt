@@ -1,9 +1,0 @@
-pandas
-numpy
-scipy
-scikit-learn
-joblib
-anthropic
-python-dotenv
-sentence-transformers
-torch

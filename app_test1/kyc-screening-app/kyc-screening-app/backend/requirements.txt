@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+pandas
+numpy
+httpx
+pytest
+anthropic
+python-dotenv
+
+# Chỉ cần khi KYC_ENCODER_MODE=real (mặc định):
+# torch
+# sentence-transformers
+
+# Chỉ cần khi chạy scripts/train_lookup.py (lúc chạy app không cần)
+# scikit-learn
+# scipy
